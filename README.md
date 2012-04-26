@@ -14,11 +14,11 @@ from your Ruby application seamless.
 
 Install the Ruby Gem:
 
-  $ gem install shopsense-ruby
+    $ gem install shopsense-ruby
 
 Include it in you Ruby application:
 
-  require 'shopsense'
+    require 'shopsense'
 
 ## Bugs
 
