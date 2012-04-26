@@ -22,7 +22,7 @@ Include it in you Ruby application:
 
 ## Documentation
 
-Documentation for this project may be accessed through it's RubyGems Site [here](https://rubygems.org/gems/shopsense-ruby)
+Documentation for this project may be accessed through it's RubyGems Site [here](https://rubygems.org/gems/shopsense-ruby).
 
 ## Bugs
 
