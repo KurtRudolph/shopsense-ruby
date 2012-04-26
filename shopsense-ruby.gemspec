@@ -5,7 +5,6 @@ require 'shopsense/version'
 Gem::Specification.new do |s|
   s.name        = "shopsense-ruby"
   s.version     = Shopsense::VERSION
-  s.platform    = Gem::Platform::Ruby
   s.authors     = ["Kurt Rudolph"]
   s.email       = ["ShopSense-Ruby.RubyGems@RudyIndustries.com"]
 
