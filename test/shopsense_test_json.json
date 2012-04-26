@@ -1,0 +1,742 @@
+{"queryDetails":{
+"category":"womens-clothes"
+,"categoryName":"Clothing"
+,"showSizeFilter":"false"
+,"showColorFilter":"true"
+,"freeTextSearch":"something"
+}
+,"totalCount":"1377"
+,"products":[{
+"id":"291225006"
+,"name":"Women's You Are Made Of Stars Long Sleeve Henley - Something Blue"
+,"currency":"USD"
+,"price":"84.0"
+,"priceLabel":"$84.00"
+,"inStock":"true"
+,"retailer":"True Religion"
+,"retailerId":"421"
+,"retailerUrl":"http://www.shopstyle.com/browse/True-Religion-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"The You Are Made of Stars henley is a cozy option and a great piece for layering. A stylish, handwritten design adds to the laidback, beachy feel of this vintage washed shirt. In Something Blue, this shirt is the perfect, versatile color to combat the winter blues.\n                     \t<ul>\n                     \t\t<li>V-neck collar with button placket<\/li>\n                     \t\t<li>Classic henley shirt<\/li>\n                     \t\t<li>Fits true to size<\/li>\n                     \t\t<li>50% polyester, 37% cotton, 13% rayon<\/li>\n                     \t\t<li>cold<\/li>\n                     \t\t<li>Made in the USA<\/li>\n                     \t<\/ul>"
+,"brandName":"True Religion"
+,"brandId":"2160"
+,"brandUrl":"http://www.shopstyle.com/browse/True-Religion?pid=uid4016-3718004-33"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=291225006&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/08/61/08612243c29ded3bd1b29d7365cd24bb_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/08/61/08612243c29ded3bd1b29d7365cd24bb_medium/true-religion-longsleeve-tops-womens-you-are-made-of-stars-long-sleeve-henley-something-blue.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/08/61/08612243c29ded3bd1b29d7365cd24bb/true-religion-longsleeve-tops-womens-you-are-made-of-stars-long-sleeve-henley-something-blue.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/08/61/08612243c29ded3bd1b29d7365cd24bb.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/08/61/08612243c29ded3bd1b29d7365cd24bb_best.jpg"
+}
+]
+,"colors":[{
+"name":"Something Blue"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/08/61/08612243c29ded3bd1b29d7365cd24bb/true-religion-longsleeve-tops-womens-you-are-made-of-stars-long-sleeve-henley-something-blue.jpg"
+}
+]
+,"canonical":["Blue"]
+}
+]
+,"sizes":[{
+"name":"XS"
+,"canonical":"XS (2)"
+}
+,{
+"name":"S"
+,"canonical":"S (4-6)"
+}
+,{
+"name":"M"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"L"
+,"canonical":"L (12-14)"
+}
+]
+,"categories":["longsleeve-tops"]
+,"categoryNames":["Longsleeve Tops"]
+,"seeMoreLabel":"Longsleeve Tops by True Religion"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/longsleeve-tops/True-Religion?pid=uid4016-3718004-33"
+,"extractDate":"2011-10-07"
+}
+,{
+"id":"315484284"
+,"name":"Women's Longsleeve Burnout Puff Tee - Something Blue"
+,"currency":"USD"
+,"price":"92.0"
+,"priceLabel":"$92.00"
+,"inStock":"true"
+,"retailer":"True Religion"
+,"retailerId":"421"
+,"retailerUrl":"http://www.shopstyle.com/browse/True-Religion-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"The Burnout Puff tee is perfect for layering or on its own. Our ultra soft tri-blend is heavily washed for a smooth and lightweight finish making it enjoyable against the skin. A signature Buddha logo across the back is ultra thin for a flirty peek of skin exposing. A slim silhouette and flattering v-neckline adds to the sex appeal.\n                     \t<ul>\n                     \t\t<li>V-neck collar<\/li>\n                     \t\t<li>Slim fit<\/li>\n                     \t\t<li>50% polyester, 37% cotton, 13% rayon<\/li>\n                     \t\t<li>cold<\/li>\n                     \t\t<li>Made in the USA<\/li>\n                     \t<\/ul>"
+,"brandName":"True Religion"
+,"brandId":"2160"
+,"brandUrl":"http://www.shopstyle.com/browse/True-Religion?pid=uid4016-3718004-33"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=315484284&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/03/2b/032b89b9f6ac8a3822dbdfe39b474e4d_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/03/2b/032b89b9f6ac8a3822dbdfe39b474e4d_medium/true-religion-longsleeve-tops-womens-longsleeve-burnout-puff-tee-something-blue.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/03/2b/032b89b9f6ac8a3822dbdfe39b474e4d/true-religion-longsleeve-tops-womens-longsleeve-burnout-puff-tee-something-blue.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/03/2b/032b89b9f6ac8a3822dbdfe39b474e4d.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/03/2b/032b89b9f6ac8a3822dbdfe39b474e4d_best.jpg"
+}
+]
+,"colors":[{
+"name":"SOMETHING BLUE"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/03/2b/032b89b9f6ac8a3822dbdfe39b474e4d/true-religion-longsleeve-tops-womens-longsleeve-burnout-puff-tee-something-blue.jpg"
+}
+]
+,"canonical":["Blue"]
+}
+]
+,"sizes":[{
+"name":"XS"
+,"canonical":"XS (2)"
+}
+,{
+"name":"S"
+,"canonical":"S (4-6)"
+}
+,{
+"name":"M"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"L"
+,"canonical":"L (12-14)"
+}
+]
+,"categories":["longsleeve-tops","tees-and-tshirts"]
+,"categoryNames":["Longsleeve Tops","Tees"]
+,"seeMoreLabel":"Longsleeve Tops by True Religion"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/longsleeve-tops/True-Religion?pid=uid4016-3718004-33"
+,"extractDate":"2011-12-22"
+}
+,{
+"id":"331000931"
+,"name":"Something Else By Natalie Wood high waist short"
+,"currency":"USD"
+,"price":"157.0"
+,"priceLabel":"$157.00"
+,"inStock":"true"
+,"retailer":"farfetch.com"
+,"retailerId":"344"
+,"retailerUrl":"http://www.shopstyle.com/browse/farfetch.com-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"Blue shorts from Something Else by Natalie Wood featuring zip fastened back and pocket detailing. Featuring neat pleating on the front and back."
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=331000931&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/2a/38/2a38aec3f2dae4b61332551337b3aa23_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/2a/38/2a38aec3f2dae4b61332551337b3aa23_medium/farfetchcom-shorts-something-else-by-natalie-wood-high-waist-short.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/2a/38/2a38aec3f2dae4b61332551337b3aa23/farfetchcom-shorts-something-else-by-natalie-wood-high-waist-short.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/2a/38/2a38aec3f2dae4b61332551337b3aa23.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/2a/38/2a38aec3f2dae4b61332551337b3aa23_best.jpg"
+}
+]
+,"colors":[{
+"name":"FRENCH BLUE"
+,"canonical":["Blue"]
+}
+]
+,"sizes":[{
+"name":"6"
+,"canonical":"S (4-6)"
+}
+,{
+"name":"8"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"10"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"12"
+,"canonical":"L (12-14)"
+}
+]
+,"categories":["shorts"]
+,"categoryNames":["Shorts"]
+,"seeMoreLabel":"Shorts at farfetch.com"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/shorts/farfetch.com-US?pid=uid4016-3718004-33"
+,"extractDate":"2012-02-29"
+}
+,{
+"id":"331374179"
+,"name":"French Connection  Something Lucky Lurex Dress"
+,"currency":"USD"
+,"price":"69.99"
+,"priceLabel":"$69.99"
+,"inStock":"true"
+,"retailer":"6pm.com"
+,"retailerId":"920"
+,"retailerUrl":"http://www.shopstyle.com/browse/6pm.com-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"<ul> <li>French Connection Size Guide <br><\/li> <li>French Connection tends to run small. The brand suggests ordering one size up from your normal size.<\/li> <li>No rabbit foot necessary when you've got the shimmering Something Lucky Lurex Dress.<\/li> <li>Flattering bateau neckline.<\/li> <li>Three-quarter length sleeves.<\/li> <li>Straight hemline.<\/li> <li>Slip-on design.<\/li> <li>84% viscose, 10% polyamide, 6% metalized fibers.<\/li> <li>Dry clean only.<\/li> <li>Imported.<\/li> <li>Length: 34 in<\/li> <li>Product measurements were taken using size 4. Please note that measurements may vary by size.<\/li> <\/ul>"
+,"brandName":"French Connection"
+,"brandId":"227"
+,"brandUrl":"http://www.shopstyle.com/browse/French-Connection?pid=uid4016-3718004-33"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=331374179&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/02/00/02009e9810e02b7dd2fe5123b8188c81_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/02/00/02009e9810e02b7dd2fe5123b8188c81_medium/french-connection-6pmcom-dresses-something-lucky-lurex-dress.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/02/00/02009e9810e02b7dd2fe5123b8188c81/french-connection-6pmcom-dresses-something-lucky-lurex-dress.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/02/00/02009e9810e02b7dd2fe5123b8188c81.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/02/00/02009e9810e02b7dd2fe5123b8188c81_best.jpg"
+}
+]
+,"colors":[{
+"name":"Black/Gold"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/f2/16/f216894c6a9f43a183b7f8ae9e6196a8/french-connection-6pmcom-dresses-something-lucky-lurex-dress.jpg"
+}
+]
+,"canonical":["Black","Gold"]
+}
+]
+,"sizes":[{
+"name":"6"
+,"canonical":"S (4-6)"
+}
+,{
+"name":"10"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"8"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"0"
+,"canonical":"XXS (0)"
+}
+,{
+"name":"2"
+,"canonical":"XS (2)"
+}
+]
+,"categories":["cocktail-dresses"]
+,"categoryNames":["Cocktail Dresses"]
+,"seeMoreLabel":"Cocktail Dresses by French Connection"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/cocktail-dresses/French-Connection?pid=uid4016-3718004-33"
+,"extractDate":"2012-03-02"
+}
+,{
+"id":"331002081"
+,"name":"Something Else By Natalie Wood sheer panelled t-shirt"
+,"currency":"USD"
+,"price":"191.0"
+,"priceLabel":"$191.00"
+,"inStock":"true"
+,"retailer":"farfetch.com"
+,"retailerId":"344"
+,"retailerUrl":"http://www.shopstyle.com/browse/farfetch.com-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"Black opaque and sheer panelled t-shirt from Something Else by Natalie Wood featuring bound stitch detailing and short sleeves."
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=331002081&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/8a/e6/8ae6b29c37ed139615ff4ed2e7288584_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/8a/e6/8ae6b29c37ed139615ff4ed2e7288584_medium/farfetchcom-shortsleeve-tops-something-else-by-natalie-wood-sheer-panelled-tshirt.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/8a/e6/8ae6b29c37ed139615ff4ed2e7288584/farfetchcom-shortsleeve-tops-something-else-by-natalie-wood-sheer-panelled-tshirt.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/8a/e6/8ae6b29c37ed139615ff4ed2e7288584.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/8a/e6/8ae6b29c37ed139615ff4ed2e7288584_best.jpg"
+}
+]
+,"colors":[{
+"name":"BLACK"
+,"canonical":["Black"]
+}
+]
+,"sizes":[{
+"name":"6"
+,"canonical":"S (4-6)"
+}
+,{
+"name":"10"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"12"
+,"canonical":"L (12-14)"
+}
+]
+,"categories":["shortsleeve-tops","tees-and-tshirts"]
+,"categoryNames":["Shortsleeve Tops","Tees"]
+,"seeMoreLabel":"Shortsleeve Tops at farfetch.com"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/shortsleeve-tops/farfetch.com-US?pid=uid4016-3718004-33"
+,"extractDate":"2012-02-29"
+}
+,{
+"id":"304390820"
+,"name":"Something Else by Natalie Wood Fishy Ken Done Kaftan"
+,"currency":"USD"
+,"price":"121.0"
+,"priceLabel":"$121.00"
+,"salePrice":"85.0"
+,"salePriceLabel":"$85.00"
+,"inStock":"true"
+,"retailer":"Revolve Clothing"
+,"retailerId":"105"
+,"retailerUrl":"http://www.shopstyle.com/browse/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"Australian designer Natalie Wood offers another something special for those of us who want clothes that are arty and innovative Wood's new line, Something, features fun styles and original prints created by a skilled team of artists. The designs are creative and eclectic, connecting fashion, street art, and music with each style. <ul> <li>Color - Black<\/li> <li>100% cotton<\/li> <li>Shoulder seam to hem measures approx 32\" in length<\/li> <li>Unlined<\/li> <li>Shoulder cut outs<\/li> <li>Raw cut edges<\/li> <\/ul>"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=304390820&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/7d/5c/7d5c06d89ec24a6ad14b3f11862bb276_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/7d/5c/7d5c06d89ec24a6ad14b3f11862bb276_medium/revolve-clothing-black-dresses-something-else-by-natalie-wood-fishy-ken-done-kaftan.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/7d/5c/7d5c06d89ec24a6ad14b3f11862bb276/revolve-clothing-black-dresses-something-else-by-natalie-wood-fishy-ken-done-kaftan.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/7d/5c/7d5c06d89ec24a6ad14b3f11862bb276.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/7d/5c/7d5c06d89ec24a6ad14b3f11862bb276_best.jpg"
+}
+]
+,"colors":[{
+"name":"Black"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/68/24/6824255e91ab79144e11fc178cc3d2cf/revolve-clothing-black-dresses-something-else-by-natalie-wood-fishy-ken-done-kaftan.jpg"
+}
+]
+,"swatchUrl":"http://resources.shopstyle.com/wim/05/9f/059f010d6d38713b01e298f3cacf9b2b.jpg"
+,"canonical":["Black"]
+}
+]
+,"sizes":[{
+"name":"US 4"
+,"canonical":"S (4-6)"
+}
+]
+,"categories":["black-dresses"]
+,"categoryNames":["Black Dresses"]
+,"seeMoreLabel":"Black Dresses at Revolve Clothing"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/black-dresses/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"extractDate":"2011-11-17"
+}
+,{
+"id":"304391467"
+,"name":"Something Else by Natalie Wood Mirrored Done Swimsuit"
+,"currency":"USD"
+,"price":"281.0"
+,"priceLabel":"$281.00"
+,"salePrice":"127.0"
+,"salePriceLabel":"$127.00"
+,"inStock":"true"
+,"retailer":"Revolve Clothing"
+,"retailerId":"105"
+,"retailerUrl":"http://www.shopstyle.com/browse/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"Australian designer Natalie Wood offers another something special for those of us who want clothes that are arty and innovative Wood's new line, Something, features fun styles and original prints created by a skilled team of artists. The designs are creative and eclectic, connecting fashion, street art, and music with each style. <ul> <li>Color - Mirrored Done<\/li> <li>80% poly 20% lycra<\/li> <\/ul>"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=304391467&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/1e/c8/1ec8ca89e9a2ff325154d1c86c65d67f_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/1e/c8/1ec8ca89e9a2ff325154d1c86c65d67f_medium/revolve-clothing-onepiece-swimwear-something-else-by-natalie-wood-mirrored-done-swimsuit.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/1e/c8/1ec8ca89e9a2ff325154d1c86c65d67f/revolve-clothing-onepiece-swimwear-something-else-by-natalie-wood-mirrored-done-swimsuit.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/1e/c8/1ec8ca89e9a2ff325154d1c86c65d67f.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/1e/c8/1ec8ca89e9a2ff325154d1c86c65d67f_best.jpg"
+}
+]
+,"colors":[{
+"name":"Mirrored Done"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/65/02/65023da25dcd06e34650d846163d357f/revolve-clothing-onepiece-swimwear-something-else-by-natalie-wood-mirrored-done-swimsuit.jpg"
+}
+]
+,"swatchUrl":"http://resources.shopstyle.com/wim/2d/f8/2df8c977fc5f4d8ff37ea6b0520fbb3a.jpg"
+}
+]
+,"sizes":[{
+"name":"US 4"
+,"canonical":"S (4-6)"
+}
+]
+,"categories":["one-piece-swimsuits"]
+,"categoryNames":["One-Piece Swimwear"]
+,"seeMoreLabel":"One-Piece Swimwear at Revolve Clothing"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/one-piece-swimsuits/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"extractDate":"2011-11-17"
+}
+,{
+"id":"305453443"
+,"name":"Something Else by Natalie Wood Sea Shell Maxi Dress"
+,"currency":"USD"
+,"price":"176.0"
+,"priceLabel":"$176.00"
+,"salePrice":"115.0"
+,"salePriceLabel":"$115.00"
+,"inStock":"true"
+,"retailer":"Revolve Clothing"
+,"retailerId":"105"
+,"retailerUrl":"http://www.shopstyle.com/browse/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"Australian designer Natalie Wood offers another something special for those of us who want clothes that are arty and innovative Wood's new line, Something, features fun styles and original prints created by a skilled team of artists. The designs are creative and eclectic, connecting fashion, street art, and music with each style. <ul> <li>Color - Black<\/li> <li>100% viscose<\/li> <li>Shoulder seam to hem measures approx 55\" in length<\/li> <li>Invisible side zip closure<\/li> <li>Contrast overlay at back creates cut-out detail<\/li> <li>Cut-out at center front<\/li> <li>Unlined<\/li> <li>Hand wash cold<\/li> <\/ul>"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=305453443&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/ec/c8/ecc8fa54ca00b5d79111e870157b6ce2_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/ec/c8/ecc8fa54ca00b5d79111e870157b6ce2_medium/revolve-clothing-black-dresses-something-else-by-natalie-wood-sea-shell-maxi-dress.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/ec/c8/ecc8fa54ca00b5d79111e870157b6ce2/revolve-clothing-black-dresses-something-else-by-natalie-wood-sea-shell-maxi-dress.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/ec/c8/ecc8fa54ca00b5d79111e870157b6ce2.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/ec/c8/ecc8fa54ca00b5d79111e870157b6ce2_best.jpg"
+}
+]
+,"colors":[{
+"name":"Black"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/ec/c8/ecc8fa54ca00b5d79111e870157b6ce2/revolve-clothing-black-dresses-something-else-by-natalie-wood-sea-shell-maxi-dress.jpg"
+}
+]
+,"swatchUrl":"http://resources.shopstyle.com/wim/51/1f/511f01e5769d1149b9b04ba733edf3a5.jpg"
+,"canonical":["Black"]
+}
+]
+,"sizes":[{
+"name":"US 4"
+,"canonical":"S (4-6)"
+}
+]
+,"categories":["black-dresses"]
+,"categoryNames":["Black Dresses"]
+,"seeMoreLabel":"Black Dresses at Revolve Clothing"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/black-dresses/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"extractDate":"2011-11-20"
+}
+,{
+"id":"292015340"
+,"name":"Something Else by Natalie Wood Ribbed Dress"
+,"currency":"USD"
+,"price":"162.0"
+,"priceLabel":"$162.00"
+,"salePrice":"91.0"
+,"salePriceLabel":"$91.00"
+,"inStock":"true"
+,"retailer":"Revolve Clothing"
+,"retailerId":"105"
+,"retailerUrl":"http://www.shopstyle.com/browse/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"Australian designer Natalie Wood offers another something special for those of us who want clothes that are arty and innovative Wood's new line, Something, features fun styles and original prints created by a skilled team of artists. The designs are creative and eclectic, connecting fashion, street art, and music with each style. <ul> <li>Color - Cream<\/li> <li>59% linen 41% viscose<\/li> <li>Shoulder seam to hem measures approx 48\" in length<\/li> <li>Vents at sides<\/li> <li>Unlined<\/li> <li>Hand wash cold<\/li> <\/ul>"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=292015340&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/ae/2c/ae2cb24db6fdfb7228509d1b985100b0_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/ae/2c/ae2cb24db6fdfb7228509d1b985100b0_medium/revolve-clothing-dresses-something-else-by-natalie-wood-ribbed-dress.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/ae/2c/ae2cb24db6fdfb7228509d1b985100b0/revolve-clothing-dresses-something-else-by-natalie-wood-ribbed-dress.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/ae/2c/ae2cb24db6fdfb7228509d1b985100b0.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/ae/2c/ae2cb24db6fdfb7228509d1b985100b0_best.jpg"
+}
+]
+,"colors":[{
+"name":"Cream"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/48/7b/487be4064f4ab967390353f3fcf9692c/revolve-clothing-dresses-something-else-by-natalie-wood-ribbed-dress.jpg"
+}
+]
+,"swatchUrl":"http://resources.shopstyle.com/wim/3d/4e/3d4e84da59e5fe804661f40430a52747.jpg"
+,"canonical":["Beige"]
+}
+]
+,"sizes":[{
+"name":"US 4"
+,"canonical":"S (4-6)"
+}
+]
+,"categories":["day-dresses"]
+,"categoryNames":["Day Dresses"]
+,"seeMoreLabel":"Day Dresses at Revolve Clothing"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/day-dresses/Revolve-Clothing-US?pid=uid4016-3718004-33"
+,"extractDate":"2011-10-09"
+}
+,{
+"id":"331148596"
+,"name":"Something else bugged pants"
+,"currency":"USD"
+,"price":"156.0"
+,"priceLabel":"$156.00"
+,"inStock":"true"
+,"retailer":"Madewell"
+,"retailerId":"720"
+,"retailerUrl":"http://www.shopstyle.com/browse/Madewell-US?pid=uid4016-3718004-33"
+,"locale":"en_US"
+,"description":"For her earthy-chic label Something Else, adventurous Aussie Natalie Wood takes cues from nature, art and '70s bohemia to develop her feminine, free-spirited vision. Case in point: these flared pants covered in polka dots. They're downright addictive. <ul> <li>Sit high at waist.<\/li> <li>Loose through hip and thigh, with a wide leg.<\/li> <li>27\" leg opening.<\/li> <li>31 1/2\" inseam.<\/li> <li>Rayon.<\/li> <li>Machine wash.<\/li> <li>Import.<\/li> <\/ul>"
+,"brandName":"Madewell"
+,"brandId":"21236"
+,"brandUrl":"http://www.shopstyle.com/browse/Madewell?pid=uid4016-3718004-33"
+,"url":"http://api.shopstyle.com/action/apiVisitRetailer?id=331148596&pid=uid4016-3718004-33"
+,"images":[{
+"sizeName":"Small"
+,"width":"32"
+,"height":"40"
+,"url":"http://resources.shopstyle.com/pim/38/f3/38f3d4c991704c159352c4c9e4637435_small.jpg"
+}
+,{
+"sizeName":"Medium"
+,"width":"112"
+,"height":"140"
+,"url":"http://resources.shopstyle.com/sim/38/f3/38f3d4c991704c159352c4c9e4637435_medium/madewell-pants-shorts-something-else-bugged-pants.jpg"
+}
+,{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/38/f3/38f3d4c991704c159352c4c9e4637435/madewell-pants-shorts-something-else-bugged-pants.jpg"
+}
+,{
+"sizeName":"XLarge"
+,"width":"328"
+,"height":"410"
+,"url":"http://resources.shopstyle.com/xim/38/f3/38f3d4c991704c159352c4c9e4637435.jpg"
+}
+,{
+"sizeName":"Original"
+,"url":"http://bim.shopstyle.com/pim/38/f3/38f3d4c991704c159352c4c9e4637435_best.jpg"
+}
+]
+,"colors":[{
+"name":"DOTS"
+,"images":[{
+"sizeName":"Large"
+,"width":"164"
+,"height":"205"
+,"url":"http://resources.shopstyle.com/sim/38/f3/38f3d4c991704c159352c4c9e4637435/madewell-pants-shorts-something-else-bugged-pants.jpg"
+}
+]
+,"swatchUrl":"http://resources.shopstyle.com/wim/6b/70/6b70793de970e736230009d7bb485a10.jpg"
+,"canonical":["Blue"]
+}
+]
+,"sizes":[{
+"name":"6"
+,"canonical":"S (4-6)"
+}
+,{
+"name":"8"
+,"canonical":"M (8-10)"
+}
+,{
+"name":"4"
+,"canonical":"S (4-6)"
+}
+,{
+"name":"10"
+,"canonical":"M (8-10)"
+}
+]
+,"categories":["pants-shorts"]
+,"categoryNames":["Pants & Shorts"]
+,"seeMoreLabel":"Pants & Shorts by Madewell"
+,"seeMoreUrl":"http://www.shopstyle.com/browse/pants-shorts/Madewell?pid=uid4016-3718004-33"
+,"extractDate":"2012-03-01"
+}
+]
+}
