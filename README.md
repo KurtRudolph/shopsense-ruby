@@ -1,6 +1,6 @@
 # Shopsense-Ruby - Ruby interface for the ShopStyle API
 
-ShopSense API! For Ruby! So Great.
+The ShopStyle API, ShopSense! For Ruby! So Great.
 
 ### Description
 
