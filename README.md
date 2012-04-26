@@ -20,6 +20,10 @@ Include it in you Ruby application:
 
     require 'shopsense'
 
+## Documentation
+
+Documentation for this project may be accessed through it's RubyGems Site [here](https://rubygems.org/gems/shopsense-ruby)
+
 ## Bugs
 
 Please report any bugs found in Shopsense-Ruby [here](https://github.com/RudyIndustries/shopsense-ruby/issues), we appreciate your help improving Shopsnese-Ruby
