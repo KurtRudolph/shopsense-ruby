@@ -33,9 +33,9 @@ describe Shopsense do
     describe "search" do
       it "it passes if the proper data is returned" do
         fts = 'something'
-        min = 0
-        count = 10
-        api.search( fts, min, count).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.search_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&fts=#{fts}&min=#{min}&count=#{count}"))
+        min = 10
+        count = 20
+        api.search( fts, min, count).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.search_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&fts=#{fts}&offset=#{min}&limit=#{count}"))
       end
     end
     describe "get_category_histogram" do
@@ -56,33 +56,33 @@ describe Shopsense do
         api.get_brands.should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_brands_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}"))
       end
     end
-    describe "get_look" do
-      it "it passes if the proper data is returned" do
-        look_id = 548347
-        api.get_look( look_id).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_look_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&look=#{look_id}"))
-      end
-    end
+    # describe "get_look" do
+    #   it "it passes if the proper data is returned" do
+    #     look_id = 548347
+    #     api.get_look( look_id).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_look_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&look=#{look_id}"))
+    #   end
+    # end
     describe "get_retailers" do
       it "it passes if the proper data is returned" do
         api.get_retailers.should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_retailers_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}"))
       end
     end
-    describe "get_stylebook" do
-      it "it passes if the proper data is returned" do
-        handle = 'KalvinTestone'
-        min = 0
-        count = 10
-        api.get_stylebook( handle, min, count).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_stylebook_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&handle=#{handle}&min=#{min}&count=#{count}"))
-      end
-    end
-    describe "get_looks" do
-      it "it passes if the proper data is returned" do
-        look_type = 'New'
-        min = 0
-        count = 10
-        api.get_looks( look_type, min, count).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_looks_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&type=#{look_type}&min=#{min}&count=#{count}"))
-      end
-    end
+    # describe "get_stylebook" do
+    #   it "it passes if the proper data is returned" do
+    #     handle = 'KalvinTestone'
+    #     min = 0
+    #     count = 10
+    #     api.get_stylebook( handle, min, count).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_stylebook_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&handle=#{handle}&min=#{min}&count=#{count}"))
+    #   end
+    # end
+    # describe "get_looks" do
+    #   it "it passes if the proper data is returned" do
+    #     look_type = 'New'
+    #     min = 0
+    #     count = 10
+    #     api.get_looks( look_type, min, count).should == Net::HTTP.get( URI.parse( "#{api.api_url}#{api.get_looks_path}pid=#{api.partner_id}&format=#{api.format}&site=#{api.site}&type=#{look_type}&min=#{min}&count=#{count}"))
+    #   end
+    # end
     describe "get_trends" do
       it "it passes if the proper data is returned" do
         category = 0
