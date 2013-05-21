@@ -1,5 +1,5 @@
 module Shopsense
-  class Client
+  class Configuration
     def initialize(args = {})
       raise "No partner_id" unless args.has_key?('partner_id')
 

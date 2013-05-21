@@ -1,6 +1,12 @@
 module Shopsense
 
-  class API < Client
+  class API
+
+    attr_reader :configuration
+
+    def initialize(args = {})
+      @configuration = Configuration.new(args)
+    end
 
     # Searches the shopsense API
     # @param [String] search_string
@@ -44,7 +50,7 @@ module Shopsense
     # @return [String]  A list of Category objects. Each Category has an id, name, and count
     #   of the number of query results in that category.
     def filter_histogram(filter_type, search_string)
-      raise "invalid filter type" unless self.filter_types.include?(filter_type)
+      raise "invalid filter type" unless @configuration.filter_types.include?(filter_type)
       raise "no search string provided!" if search_string.nil?
       args = {
         :fts => search_string,
@@ -120,12 +126,12 @@ module Shopsense
     # @return [String]
     #   A list of looks of the given type.
     def looks(look_type, offset = 0, limit = 10)
-      raise "invalid filter type must be one of the following: #{self.look_types}" unless self.look_types.include?(look_type)
+      raise "invalid filter type must be one of the following: #{@configuration.look_types}" unless @configuration.look_types.include?(look_type)
       # TODO Are these params correctly named?
       args = {
-        :type =>   + look_type,
-        :min =>    + offset,
-        :count =>  + limit
+        :type =>   look_type,
+        :min =>    offset,
+        :count =>  limit
       }
       call_api(:get_looks, args)
     end
@@ -180,10 +186,10 @@ module Shopsense
       #   A concatenated group of arguments seperated by a an & symbol and spces substitued with a + symbol.
       # @return [String] A list of the data returned
       def call_api(method, args = {})
-        base_url = self.api_url + self.__send__("#{method}_path")
-        args[:pid] = self.partner_id
-        args[:format] = self.format
-        args[:site] = self.site
+        base_url = @configuration.api_url + @configuration.__send__("#{method}_path")
+        args[:pid] = @configuration.partner_id
+        args[:format] = @configuration.format
+        args[:site] = @configuration.site
         if base_url.include?("?")
           base_url.chomp!("&")
           base_url << "&"
@@ -193,8 +199,9 @@ module Shopsense
         base_url << args.map {|(k,v)| "#{CGI::escape(k.to_s)}=#{CGI::escape(v.to_s)}" }.join("&")
         uri = URI.parse(base_url)
         data = Net::HTTP.get(uri)
-        if self.unserialize
-          Yajl::Parser.new(:symbolize_keys => true).parse(data)
+        if @configuration.unserialize
+          require 'multi_json'
+          MultiJson.load(data, :symbolize_keys => true)
         else
           data
         end

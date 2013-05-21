@@ -1,5 +1,4 @@
 require 'net/http'
-require 'yajl'
 require 'cgi'
 =begin rdoc
 Shopsense is an easy to use Ruby interface for the {Shopstyle API}[https://shopsense.shopstyle.com/page/ShopSenseHome],
@@ -21,5 +20,5 @@ your application.
   see Shopsense::API
 =end
 
-require 'shopsense/client'
+require 'shopsense/configuration'
 require 'shopsense/api'
