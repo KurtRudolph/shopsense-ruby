@@ -12,15 +12,14 @@ module Shopsense
     # @return  A list of Product objects. Each Product has an id, name,
     #   description, price, retailer, brand name, categories, images in small/medium/large,
     #   and a URL that forwards to the retailer's site.
-    def search( search_string = nil, index = 0, num_results = 10)
-      raise "no search string provieded!" if( search_string === nil)
-
-      fts   = "fts="    + search_string.split().join( '+').to_s
-      min   = "offset=" + index.to_s
-      count = "limit="  + num_results.to_s
-      args  = [fts, min, count].join( '&')
-
-      return call_api( __method__, args)
+    def search(search_string, offset = 0, limit = 10)
+      raise "no search string provieded!" if search_string.nil?
+      args = {
+        :fts => search_string,
+        :offset => offset,
+        :limit => limit
+      }
+      call_api(__method__, args)
     end
 
 
@@ -29,12 +28,12 @@ module Shopsense
     # @param  [String]  search_string The string to be in the query.
     # @return [String]  A list of Category objects. Each Category has an id, name, and count
     #   of the number of query results in that category.
-    def get_category_histogram( search_string = nil)
-      raise "no search string provieded!" if( search_string === nil)
-
-      fts = "fts=" + search_string.split().join( '+').to_s
-
-      return call_api( __method__, fts)
+    def get_category_histogram(search_string)
+      raise "no search string provieded!" if search_string.nil?
+      args = {
+        :fts => search_string
+      }
+      call_api(__method__, args)
     end
 
     # This method returns a list of categories and product counts that describe the results
@@ -45,22 +44,21 @@ module Shopsense
     # @param  [String]  search_string The string to be in the query.
     # @return [String]  A list of Category objects. Each Category has an id, name, and count
     #   of the number of query results in that category.
-    def get_filter_histogram( filter_type = nil, search_string = nil)
-      raise "no search string provided!" if( search_string === nil)
-      raise "invalid filter type" if( !self.filter_types.include?( filter_type))
-
-      filterType = "filters=" + filter_type.to_s
-      fts = "fts=" + search_string.split().join( '+').to_s
-      args  = [filterType, fts].join( '&')
-
-      return call_api( __method__, args)
+    def get_filter_histogram(filter_type, search_string)
+      raise "invalid filter type" unless self.filter_types.include?(filter_type)
+      raise "no search string provided!" if search_string.nil?
+      args = {
+        :fts => search_string,
+        :filters => filter_type
+      }
+      call_api(__method__, args)
     end
 
     # This method returns a list of brands that have live products. Brands that have
     # very few products will be omitted.
     # @return [String] A list of all Brands, with id, name, url, and synonyms of each.
     def get_brands
-      return call_api( __method__)
+      call_api(__method__)
     end
 
     # This method returns information about a particular look and its products.
@@ -72,18 +70,18 @@ module Shopsense
     #   URL is the value to use for this API method.
     # @return [String]  single look, with title, description, a set of tags, and a list of products.
     #   The products have the fields listed (see #search)
-    def get_look( look_id = nil)
-      raise "no look_id provieded!" if( look_id === nil)
-
-      look = "look=" + look_id.to_s
-
-      return call_api( __method__, look)
+    def get_look(look_id)
+      raise "no look_id provieded!" if look_id.nil?
+      args = {
+        :look => look_id
+      }
+      call_api(__method__, args)
     end
 
     # This method returns a list of retailers that have live products.
     # @return [Sting] A list of all Retailers, with id, name, and url of each.
     def get_retailers
-      return call_api( __method__)
+      call_api(__method__)
     end
 
     # This method returns information about a particular user's Stylebook, the
@@ -97,15 +95,14 @@ module Shopsense
     # @return [String]
     #   A look id of the user's Stylebook, the look id of each individual look within that Stylebook,
     #   and the title and description associated with each look.
-    def get_stylebook(  user_name = nil, index = 0, num_results = 10)
-      raise "no user_name provieded!" if( user_name === nil)
-
-      handle  = "handle=" + user_name.to_s
-      min     = "min="    + index.to_s
-      count   = "count="  + num_results.to_s
-      args    = [handle, min, count].join( '&')
-
-      return call_api( __method__, args)
+    def get_stylebook(user_name, offset = 0, limit = 10)
+      raise "no user_name provieded!" if user_name.nil?
+      args = {
+        :handle => user_name,
+        :offset => offset,
+        :limit => limit
+      }
+      call_api(__method__, args)
     end
 
     # This method returns information about looks that match different kinds of searches.
@@ -123,15 +120,15 @@ module Shopsense
     #   The number of results to be returned.
     # @return [String]
     #   A list of looks of the given type.
-    def get_looks( look_type = nil, index = 0, num_results = 10)
-      raise "invalid filter type must be one of the following: #{self.look_types}" if( !self.look_types.include?( look_type))
-
-      type    = "type="   + look_type.to_s
-      min     = "min="    + index.to_s
-      count   = "count="  + num_results.to_s
-      args    = [type, min, count].join( '&')
-
-      return call_api( __method__, args)
+    def get_looks(look_type, offset = 0, limit = 10)
+      raise "invalid filter type must be one of the following: #{self.look_types}" unless self.look_types.include?(look_type)
+      # TODO Are these params correctly named?
+      args = {
+        :type =>   + look_type,
+        :min =>    + offset,
+        :count =>  + limit
+      }
+      call_api(__method__, args)
     end
 
     # TODO:
@@ -146,8 +143,8 @@ module Shopsense
     #   editor. The "id" query parameter of that URL is the value to use for this API method.
     # @return [String]
     #   A web link to the retailer. $1 of the $0
-    def visit_retailer( id)
-
+    def visit_retailer(id)
+      raise "TODO"
     end
 
     # This method returns the popular brands for a given category along with a sample product for the
@@ -157,12 +154,12 @@ module Shopsense
     #   parameter. If category is not supplied, all the popular brands regardless of category will be returned.
     # @return [String] A list of trends in the given category. Each trend has a brand, category, url, and
     #   optionally the top-ranked product for each brand/category.
-    def get_trends( category = "", products = 0)
-      cat = "cat=" + category.to_s
-      products = "products=" + products.to_s
-      args    = [cat, products].join( '&')
-
-      return call_api( __method__, args)
+    def get_trends(category = "", products = 0)
+      args = {
+        :cat => category,
+        :products => products
+      }
+      call_api(__method__, args)
     end
     private
 
@@ -172,29 +169,20 @@ module Shopsense
       # @param [String] args
       #   A concatenated group of arguments seperated by a an & symbol and spces substitued with a + symbol.
       # @return [String] A list of the data returned
-      def call_api( method, args = nil)
-        method_url  = self.api_url  + self.send( "#{method}_path")
-        pid         = "pid="        + self.partner_id
-        format      = "format="     + self.format
-        site        = "site="       + self.site
-
-        if( args === nil) then
-          uri   = URI.parse( method_url.to_s + [pid, format, site].join('&').to_s)
+      def call_api(method, args = {})
+        base_url = self.api_url + self.__send__("#{method}_path")
+        args[:pid] = self.partner_id
+        args[:format] = self.format
+        args[:site] = self.site
+        if base_url.include?("?")
+          base_url.chomp!("&")
+          base_url << "&"
         else
-          uri   = URI.parse( method_url.to_s + [pid, format, site, args].join('&').to_s)
+          base_url << "?"
         end
-
-        return Net::HTTP.get( uri)
+        base_url << args.map {|(k,v)| "#{CGI::escape(k.to_s)}=#{CGI::escape(v.to_s)}" }.join("&")
+        uri = URI.parse(base_url)
+        Net::HTTP.get(uri)
       end
   end
 end
-
-    # @macro [new] api.index
-    #   @param [Integer] index
-    #     The start index of results returned.
-    # @macro [new] api.num_results
-    #   @param [Integer] num_results
-    #     The number of results to be returned.
-    # @macro [new] api.search_string
-    #   @param [String] search_string
-    #     The string to be in the query.
