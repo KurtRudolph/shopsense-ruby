@@ -19,21 +19,20 @@ module Shopsense
         :offset => offset,
         :limit => limit
       }
-      call_api(__method__, args)
+      call_api(:search, args)
     end
-
 
     # This method returns a list of categories and product counts that describe the results
     # of a given product query. The query is specified using the product query parameters.
     # @param  [String]  search_string The string to be in the query.
     # @return [String]  A list of Category objects. Each Category has an id, name, and count
     #   of the number of query results in that category.
-    def get_category_histogram(search_string)
+    def category_histogram(search_string)
       raise "no search string provieded!" if search_string.nil?
       args = {
         :fts => search_string
       }
-      call_api(__method__, args)
+      call_api(:get_category_histogram, args)
     end
 
     # This method returns a list of categories and product counts that describe the results
@@ -44,21 +43,21 @@ module Shopsense
     # @param  [String]  search_string The string to be in the query.
     # @return [String]  A list of Category objects. Each Category has an id, name, and count
     #   of the number of query results in that category.
-    def get_filter_histogram(filter_type, search_string)
+    def filter_histogram(filter_type, search_string)
       raise "invalid filter type" unless self.filter_types.include?(filter_type)
       raise "no search string provided!" if search_string.nil?
       args = {
         :fts => search_string,
         :filters => filter_type
       }
-      call_api(__method__, args)
+      call_api(:get_filter_histogram, args)
     end
 
     # This method returns a list of brands that have live products. Brands that have
     # very few products will be omitted.
     # @return [String] A list of all Brands, with id, name, url, and synonyms of each.
-    def get_brands
-      call_api(__method__)
+    def brands
+      call_api(:get_brands)
     end
 
     # This method returns information about a particular look and its products.
@@ -70,18 +69,18 @@ module Shopsense
     #   URL is the value to use for this API method.
     # @return [String]  single look, with title, description, a set of tags, and a list of products.
     #   The products have the fields listed (see #search)
-    def get_look(look_id)
+    def look(look_id)
       raise "no look_id provieded!" if look_id.nil?
       args = {
         :look => look_id
       }
-      call_api(__method__, args)
+      call_api(:get_look, args)
     end
 
     # This method returns a list of retailers that have live products.
     # @return [Sting] A list of all Retailers, with id, name, and url of each.
-    def get_retailers
-      call_api(__method__)
+    def retailers
+      call_api(:get_retailers)
     end
 
     # This method returns information about a particular user's Stylebook, the
@@ -95,14 +94,14 @@ module Shopsense
     # @return [String]
     #   A look id of the user's Stylebook, the look id of each individual look within that Stylebook,
     #   and the title and description associated with each look.
-    def get_stylebook(user_name, offset = 0, limit = 10)
+    def stylebook(user_name, offset = 0, limit = 10)
       raise "no user_name provieded!" if user_name.nil?
       args = {
         :handle => user_name,
         :offset => offset,
         :limit => limit
       }
-      call_api(__method__, args)
+      call_api(:get_stylebook, args)
     end
 
     # This method returns information about looks that match different kinds of searches.
@@ -120,7 +119,7 @@ module Shopsense
     #   The number of results to be returned.
     # @return [String]
     #   A list of looks of the given type.
-    def get_looks(look_type, offset = 0, limit = 10)
+    def looks(look_type, offset = 0, limit = 10)
       raise "invalid filter type must be one of the following: #{self.look_types}" unless self.look_types.include?(look_type)
       # TODO Are these params correctly named?
       args = {
@@ -128,7 +127,7 @@ module Shopsense
         :min =>    + offset,
         :count =>  + limit
       }
-      call_api(__method__, args)
+      call_api(:get_looks, args)
     end
 
     # TODO:
@@ -154,13 +153,24 @@ module Shopsense
     #   parameter. If category is not supplied, all the popular brands regardless of category will be returned.
     # @return [String] A list of trends in the given category. Each trend has a brand, category, url, and
     #   optionally the top-ranked product for each brand/category.
-    def get_trends(category = "", products = 0)
+    def trends(category = "", products = 0)
       args = {
         :cat => category,
         :products => products
       }
-      call_api(__method__, args)
+      call_api(:get_trends, args)
     end
+
+    # Deprecated - Kept here for BC
+    alias_method :get_category_histogram, :category_histogram
+    alias_method :get_filter_histogram, :filter_histogram
+    alias_method :get_brands, :brands
+    alias_method :get_look, :look
+    alias_method :get_retailers, :retailers
+    alias_method :get_stylebook, :stylebook
+    alias_method :get_looks, :looks
+    alias_method :get_trends, :trends
+
     private
 
       # This method is used for making the http calls building off the DSL of this module.
@@ -182,7 +192,12 @@ module Shopsense
         end
         base_url << args.map {|(k,v)| "#{CGI::escape(k.to_s)}=#{CGI::escape(v.to_s)}" }.join("&")
         uri = URI.parse(base_url)
-        Net::HTTP.get(uri)
+        data = Net::HTTP.get(uri)
+        if self.unserialize
+          Yajl::Parser.new(:symbolize_keys => true).parse(data)
+        else
+          data
+        end
       end
   end
 end

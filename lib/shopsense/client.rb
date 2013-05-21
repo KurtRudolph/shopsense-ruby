@@ -6,6 +6,7 @@ module Shopsense
       attr_accessors = {
                 #:
                 'format'  => 'json',
+                'unserialize'  => true,
                 'site'    => 'us'}
       attr_accessors.each_key{ |key| (class << self; self; end).send(:attr_accessor, key.to_sym)}
 
