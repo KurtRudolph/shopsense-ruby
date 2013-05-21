@@ -20,5 +20,4 @@ your application.
   see Shopsense::API
 =end
 
-require 'shopsense/configuration'
 require 'shopsense/api'

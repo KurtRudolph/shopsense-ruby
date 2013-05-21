@@ -1,54 +1,38 @@
 require './spec/spec_helper'
+require 'yaml'
 
 describe Shopsense do
   let(:test_input) { YAML.load_file('test/shopsense_test_config.yml') }
-  describe Shopsense::Configuration do
-    let(:configuration) { Shopsense::Configuration.new(test_input) }
-    describe "initialization of 'Configuration' object" do
-      it "passes if 'partner_id' is defined properly" do
-        configuration.partner_id.should == test_input['partner_id']
-      end
-      it "passes if 'format' is defined properly" do
-        configuration.format.should == test_input['format']
-      end
-      it "passes with a valid 'site'" do
-        configuration.site.should == test_input['site']
-      end
-      it "passes if 'format' is able to be updated" do
-        new_format = 'xml'
-        configuration.format = new_format
-        configuration.format.should == new_format
-      end
-    end
-  end
+  let(:partner_id) {
+    test_input['partner_id']
+  }
 
   describe Shopsense::API do
     let(:api) { Shopsense::API.new(test_input) }
-    let(:configuration) { api.configuration }
     describe "search" do
       it "it passes if the proper data is returned" do
         fts = 'something'
         min = 10
         count = 20
-        api.search(fts, :offset => min, :limit => count).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.search_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&fts=#{fts}&offset=#{min}&limit=#{count}"))
+        api.search(fts, :offset => min, :limit => count).should == Net::HTTP.get(URI.parse("http://api.shopstyle.com/api/v2/products?pid=#{partner_id}&format=json&site=us&fts=#{fts}&offset=#{min}&limit=#{count}"))
       end
     end
     describe "get_category_histogram" do
       it "it passes if the proper data is returned" do
         fts = 'something'
-        api.category_histogram(fts).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_category_histogram_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&fts=#{fts}"))
+        api.category_histogram(fts).should == Net::HTTP.get(URI.parse("http://api.shopstyle.com/api/v2/histogram?pid=#{partner_id}&format=json&site=us&filters=Category&fts=#{fts}"))
       end
     end
     describe "get_filter_histogram" do
       it "it passes if the proper data is returned" do
         filter_type = 'Brands'
         fts = 'something'
-        api.filter_histogram(filter_type, fts).should == Net::HTTP.get(URI.parse( "#{configuration.api_url}#{configuration.get_filter_histogram_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&filterType=#{filter_type}&fts=#{fts}"))
+        api.filter_histogram(filter_type, fts).should == Net::HTTP.get(URI.parse("http://api.shopstyle.com/api/v2/histogram?pid=#{partner_id}&format=json&site=us&filterType=#{filter_type}&fts=#{fts}"))
       end
     end
     describe "get_brands" do
       it "it passes if the proper data is returned" do
-        api.brands.should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_brands_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}"))
+        api.brands.should == Net::HTTP.get(URI.parse("http://api.shopstyle.com/api/v2/brands?pid=#{partner_id}&format=json&site=us"))
       end
     end
     # describe "get_look" do
@@ -59,7 +43,7 @@ describe Shopsense do
     # end
     describe "get_retailers" do
       it "it passes if the proper data is returned" do
-        api.retailers.should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_retailers_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}"))
+        api.retailers.should == Net::HTTP.get(URI.parse("http://api.shopstyle.com/api/v2/retailers?pid=#{partner_id}&format=json&site=us"))
       end
     end
     # describe "get_stylebook" do
@@ -84,13 +68,12 @@ describe Shopsense do
       it "it passes if the proper data is returned" do
         category = 0
         products = 0
-        api.trends(category, products).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_trends_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&cat=#{category}&products=#{products}"))
+        api.trends(category, products).should == Net::HTTP.get(URI.parse("http://api.shopstyle.com/api/v2/trends?pid=#{partner_id}&format=json&site=us&cat=#{category}&products=#{products}"))
       end
     end
 
     describe "With native unserialization" do
       let(:api) { Shopsense::API.new(test_input.merge("unserialize" => true)) }
-      let(:configuration) { api.configuration }
       describe "search" do
         it "it passes if the proper data is returned" do
           fts = 'something'

@@ -1,11 +1,17 @@
 module Shopsense
 
+  API_ENDPOINT = 'http://api.shopstyle.com/api/v2'
+  FILTER_TYPES = ['Brands', 'Retailer', 'Price', 'Discount', 'Size', 'Color'].freeze
+  LOOK_TYPES = ['New', 'TopRated', 'Celebrities', 'Featured'].freeze
+
   class API
 
     attr_reader :configuration
 
     def initialize(args = {})
-      @configuration = Configuration.new(args)
+      @partner_id = args['partner_id']
+      @unserialize = args['unserialize']
+      @site = args['site'] || 'www.shopstyle.com'
     end
 
     # Searches the shopsense API
@@ -26,7 +32,7 @@ module Shopsense
         :offset => opts[:offset],
         :limit => opts[:limit]
       }
-      call_api(:search, args)
+      call_api('/products', args)
     end
 
     # This method returns a list of categories and product counts that describe the results
@@ -37,9 +43,10 @@ module Shopsense
     def category_histogram(search_string)
       raise "no search string provided!" if search_string.nil?
       args = {
-        :fts => search_string
+        :fts => search_string,
+        :filters => 'Category'
       }
-      call_api(:get_category_histogram, args)
+      call_api('/histogram', args)
     end
 
     # This method returns a list of categories and product counts that describe the results
@@ -51,20 +58,20 @@ module Shopsense
     # @return [String]  A list of Category objects. Each Category has an id, name, and count
     #   of the number of query results in that category.
     def filter_histogram(filter_type, search_string)
-      raise "invalid filter type" unless @configuration.filter_types.include?(filter_type)
+      raise "invalid filter type" unless FILTER_TYPES.include?(filter_type)
       raise "no search string provided!" if search_string.nil?
       args = {
         :fts => search_string,
         :filters => filter_type
       }
-      call_api(:get_filter_histogram, args)
+      call_api('/histogram', args)
     end
 
     # This method returns a list of brands that have live products. Brands that have
     # very few products will be omitted.
     # @return [String] A list of all Brands, with id, name, url, and synonyms of each.
     def brands
-      call_api(:get_brands)
+      call_api('/brands')
     end
 
     # This method returns information about a particular look and its products.
@@ -77,17 +84,13 @@ module Shopsense
     # @return [String]  single look, with title, description, a set of tags, and a list of products.
     #   The products have the fields listed (see #search)
     def look(look_id)
-      raise "no look_id provided!" if look_id.nil?
-      args = {
-        :look => look_id
-      }
-      call_api(:get_look, args)
+      raise "TODO"
     end
 
     # This method returns a list of retailers that have live products.
     # @return [Sting] A list of all Retailers, with id, name, and url of each.
     def retailers
-      call_api(:get_retailers)
+      call_api('/retailers')
     end
 
     # This method returns information about a particular user's Stylebook, the
@@ -102,14 +105,7 @@ module Shopsense
     #   A look id of the user's Stylebook, the look id of each individual look within that Stylebook,
     #   and the title and description associated with each look.
     def stylebook(user_name, opts = {})
-      opts = {:offset => 0, :limit => 10}.merge(opts)
-      raise "no user_name provided!" if user_name.nil?
-      args = {
-        :handle => user_name,
-        :offset => opts[:offset],
-        :limit => opts[:limit]
-      }
-      call_api(:get_stylebook, args)
+      raise "TODO"
     end
 
     # This method returns information about looks that match different kinds of searches.
@@ -128,15 +124,7 @@ module Shopsense
     # @return [String]
     #   A list of looks of the given type.
     def looks(look_type, opts = {})
-      opts = {:offset => 0, :limit => 10}.merge(opts)
-      raise "invalid filter type must be one of the following: #{@configuration.look_types}" unless @configuration.look_types.include?(look_type)
-      # TODO Are these params correctly named?
-      args = {
-        :type =>   look_type,
-        :min =>    opts[:offset],
-        :count =>  opts[:limit]
-      }
-      call_api(:get_looks, args)
+      raise "TODO"
     end
 
     # TODO:
@@ -167,7 +155,7 @@ module Shopsense
         :cat => category,
         :products => products
       }
-      call_api(:get_trends, args)
+      call_api('/trends', args)
     end
 
     # Deprecated - Kept here for BC
@@ -188,11 +176,11 @@ module Shopsense
       # @param [String] args
       #   A concatenated group of arguments seperated by a an & symbol and spces substitued with a + symbol.
       # @return [String] A list of the data returned
-      def call_api(method, args = {})
-        base_url = @configuration.api_url + @configuration.__send__("#{method}_path")
-        args[:pid] = @configuration.partner_id
-        args[:format] = @configuration.format
-        args[:site] = @configuration.site
+      def call_api(relative_url, args = {})
+        base_url = API_ENDPOINT + relative_url
+        args[:pid] = @partner_id
+        args[:format] = 'json'
+        args[:site] = @site
         if base_url.include?("?")
           base_url.chomp!("&")
           base_url << "&"
@@ -202,7 +190,7 @@ module Shopsense
         base_url << args.map {|(k,v)| "#{CGI::escape(k.to_s)}=#{CGI::escape(v.to_s)}" }.join("&")
         uri = URI.parse(base_url)
         data = Net::HTTP.get(uri)
-        if @configuration.unserialize
+        if @unserialize
           require 'multi_json'
           MultiJson.load(data, :symbolize_keys => true)
         else
