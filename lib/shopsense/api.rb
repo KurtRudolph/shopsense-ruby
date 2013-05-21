@@ -18,12 +18,13 @@ module Shopsense
     # @return  A list of Product objects. Each Product has an id, name,
     #   description, price, retailer, brand name, categories, images in small/medium/large,
     #   and a URL that forwards to the retailer's site.
-    def search(search_string, offset = 0, limit = 10)
+    def search(search_string, opts = {})
+      opts = {:offset => 0, :limit => 10}.merge(opts)
       raise "no search string provided!" if search_string.nil?
       args = {
         :fts => search_string,
-        :offset => offset,
-        :limit => limit
+        :offset => opts[:offset],
+        :limit => opts[:limit]
       }
       call_api(:search, args)
     end
@@ -100,12 +101,13 @@ module Shopsense
     # @return [String]
     #   A look id of the user's Stylebook, the look id of each individual look within that Stylebook,
     #   and the title and description associated with each look.
-    def stylebook(user_name, offset = 0, limit = 10)
+    def stylebook(user_name, opts = {})
+      opts = {:offset => 0, :limit => 10}.merge(opts)
       raise "no user_name provided!" if user_name.nil?
       args = {
         :handle => user_name,
-        :offset => offset,
-        :limit => limit
+        :offset => opts[:offset],
+        :limit => opts[:limit]
       }
       call_api(:get_stylebook, args)
     end
@@ -125,13 +127,14 @@ module Shopsense
     #   The number of results to be returned.
     # @return [String]
     #   A list of looks of the given type.
-    def looks(look_type, offset = 0, limit = 10)
+    def looks(look_type, opts = {})
+      opts = {:offset => 0, :limit => 10}.merge(opts)
       raise "invalid filter type must be one of the following: #{@configuration.look_types}" unless @configuration.look_types.include?(look_type)
       # TODO Are these params correctly named?
       args = {
         :type =>   look_type,
-        :min =>    offset,
-        :count =>  limit
+        :min =>    opts[:offset],
+        :count =>  opts[:limit]
       }
       call_api(:get_looks, args)
     end

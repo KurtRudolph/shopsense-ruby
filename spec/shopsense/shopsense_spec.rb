@@ -1,5 +1,4 @@
 require './spec/spec_helper'
-require 'json'
 
 describe Shopsense do
   let(:test_input) { YAML.load_file('test/shopsense_test_config.yml') }
@@ -31,7 +30,7 @@ describe Shopsense do
         fts = 'something'
         min = 10
         count = 20
-        api.search(fts, min, count).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.search_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&fts=#{fts}&offset=#{min}&limit=#{count}"))
+        api.search(fts, :offset => min, :limit => count).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.search_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&fts=#{fts}&offset=#{min}&limit=#{count}"))
       end
     end
     describe "get_category_histogram" do
@@ -68,7 +67,7 @@ describe Shopsense do
     #     handle = 'KalvinTestone'
     #     min = 0
     #     count = 10
-    #     api.stylebook(handle, min, count).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_stylebook_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&handle=#{handle}&min=#{min}&count=#{count}"))
+    #     api.stylebook(handle, :offset => min, :limit => count).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_stylebook_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&handle=#{handle}&min=#{min}&count=#{count}"))
     #   end
     # end
 =begin
@@ -77,7 +76,7 @@ describe Shopsense do
         look_type = 'New'
         min = 0
         count = 10
-        api.looks(look_type, min, count).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_looks_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&type=#{look_type}&min=#{min}&count=#{count}"))
+        api.looks(look_type, :offset => min, :limit => count).should == Net::HTTP.get(URI.parse("#{configuration.api_url}#{configuration.get_looks_path}?pid=#{configuration.partner_id}&format=#{configuration.format}&site=#{configuration.site}&type=#{look_type}&min=#{min}&count=#{count}"))
       end
     end
 =end
@@ -97,7 +96,7 @@ describe Shopsense do
           fts = 'something'
           min = 10
           count = 20
-          api.search(fts, min, count).should have_key(:metadata)
+          api.search(fts, :offset => min, :limit => count).should have_key(:metadata)
         end
       end
     end
