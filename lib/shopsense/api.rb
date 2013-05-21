@@ -19,7 +19,7 @@ module Shopsense
     #   description, price, retailer, brand name, categories, images in small/medium/large,
     #   and a URL that forwards to the retailer's site.
     def search(search_string, offset = 0, limit = 10)
-      raise "no search string provieded!" if search_string.nil?
+      raise "no search string provided!" if search_string.nil?
       args = {
         :fts => search_string,
         :offset => offset,
@@ -34,7 +34,7 @@ module Shopsense
     # @return [String]  A list of Category objects. Each Category has an id, name, and count
     #   of the number of query results in that category.
     def category_histogram(search_string)
-      raise "no search string provieded!" if search_string.nil?
+      raise "no search string provided!" if search_string.nil?
       args = {
         :fts => search_string
       }
@@ -76,7 +76,7 @@ module Shopsense
     # @return [String]  single look, with title, description, a set of tags, and a list of products.
     #   The products have the fields listed (see #search)
     def look(look_id)
-      raise "no look_id provieded!" if look_id.nil?
+      raise "no look_id provided!" if look_id.nil?
       args = {
         :look => look_id
       }
@@ -101,7 +101,7 @@ module Shopsense
     #   A look id of the user's Stylebook, the look id of each individual look within that Stylebook,
     #   and the title and description associated with each look.
     def stylebook(user_name, offset = 0, limit = 10)
-      raise "no user_name provieded!" if user_name.nil?
+      raise "no user_name provided!" if user_name.nil?
       args = {
         :handle => user_name,
         :offset => offset,
