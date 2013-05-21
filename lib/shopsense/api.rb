@@ -4,12 +4,20 @@ module Shopsense
   FILTER_TYPES = ['Category', 'Brand', 'Retailer', 'Price', 'Discount', 'Size', 'Color'].freeze
   LOOK_TYPES = ['New', 'TopRated', 'Celebrities', 'Featured'].freeze
 
+  class HTTP < Net::HTTP
+    def socket_closed?
+      @socket && @socket.closed?
+    end
+  end
+
   class API
 
     def initialize(args = {})
       @partner_id = args['partner_id']
       @unserialize = args['unserialize'].nil? ? true : args['unserialize']
+      @http_keep_alive = args['http_keep_alive'].nil? ? true : args['http_keep_alive']
       @site = args['site'] || 'www.shopstyle.com'
+      @http_session = {}
     end
 
     # Searches the shopsense API
@@ -237,7 +245,7 @@ module Shopsense
         }.join("&")
         href = API_ENDPOINTS[api_version] + relative_url + "?" + compiled_args
         uri = URI.parse(href)
-        response = Net::HTTP.get_response(uri)
+        response = http_session_for(uri).request(Net::HTTP::Get.new(uri.request_uri))
         data = response.body
         if response.code.to_i > 299 || response.code.to_i < 200
           raise data
@@ -249,5 +257,22 @@ module Shopsense
           data
         end
       end
+
+      def http_session_for(uri)
+        key = "#{uri.scheme}://#{uri.host}:#{uri.port}"
+        unless @http_session[key] && !@http_session[key].socket_closed?
+          http = Shopsense::HTTP.new(uri.host, uri.port)
+          http.use_ssl = true if uri.scheme == "https"
+          http.open_timeout = 2
+          http.read_timeout = 10
+          if @http_keep_alive
+            http.start
+            @http_session[key] = http
+          end
+          return http
+        end
+        @http_session[key]
+      end
+
   end
 end
