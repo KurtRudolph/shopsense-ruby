@@ -10,6 +10,19 @@ module Shopsense
     end
   end
 
+  def self.configuration
+    @configuration ||= {}
+  end
+
+  # Shopsense.configuration = YAML.load_file('config/shopsense.yml')
+  def self.configuration=(conf)
+    @configuration = conf
+  end
+
+  def self.api
+    @api ||= Shopsense::API.new(Shopsense.configuration)
+  end
+
   class API
 
     def initialize(args = {})
