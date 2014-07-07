@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = 'shopsense-ruby'
   s.version     = Shopsense::VERSION
   s.authors     = ['Kurt Rudolph']
-  s.email       = ['ShopSense-Ruby.RubyGems@RudyIndustries.com']
+  s.email       = ['kurt@rudycomputing.io']
 
   s.summary     = 'ShopSense API! For Ruby! So Great.'
   s.description = 'This Gem provides an easy to use interface for the ShopStyleAPI commonly known as ShopSense. ShopSense-Ruby includes a set of convent classes and methods designed to make accessing the ShopStyle API from your Ruby application seamless.'
-  s.homepage    = 'http://RudyIndustries.GitHub.com/shopsense-ruby'
+  s.homepage    = 'http://rudycomputing.github.io/shopsense-ruby'
 
   s.license     = 'MIT'
   s.required_ruby_version = '>= 1.8.7'

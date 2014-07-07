@@ -22,3 +22,17 @@ gem "shopsense-ruby", :git => "git://github.com/PopSugar/ruby-popsugar-shopping-
 Include it in you Ruby application:
 
     require 'shopsense'
+
+## Documentation
+
+Documentation for this project may be accessed through it's RubyGems Site [here](https://rubygems.org/gems/shopsense-ruby).
+
+## Bugs
+
+Please report any bugs found in Shopsense-Ruby [here](https://github.com/RudyComputing/shopsense-ruby/issues), we appreciate your help improving Shopsnese-Ruby
+
+## Future Work
+
+This gem looks to serve not only as a means of elegantly access the 
+[ShopStyle API](https://shopsense.shopstyle.com/page/ShopSenseHome) 
+but a means of offering a host of shopping oriented programing features!
