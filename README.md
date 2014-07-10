@@ -16,7 +16,7 @@ Install with Bundler
 
 Add the folowing to your Gemfile
 ```
-gem "shopsense-ruby", :git => "git://github.com/PopSugar/ruby-popsugar-shopping-api.git", :branch => "master"
+gem "shopsense-ruby"
 ```
 
 Include it in you Ruby application:
