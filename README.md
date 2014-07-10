@@ -1,6 +1,6 @@
-# Shopsense-Ruby - Ruby interface for the ShopStyle API
+# Shopsense-Ruby - Ruby interface for the POPSUGAR Shopping API
 
-The ShopStyle API, ShopSense! For Ruby! So Great.
+The POPSUGAR Shopping API, ShopSense! For Ruby! So Great.
 
 ### Description
 
@@ -10,11 +10,14 @@ Shopsense-Ruby includes a set of convent classes and methods designed to make
 accessing the [ShopStyle API](https://shopsense.shopstyle.com/page/ShopSenseHome) 
 from your Ruby application seamless.
 
-## Installation
+## Usage
 
-Install the Ruby Gem:
+Install with Bundler
 
-    $ gem install shopsense-ruby
+Add the folowing to your Gemfile
+```
+gem "shopsense-ruby"
+```
 
 Include it in you Ruby application:
 
